@@ -1,0 +1,46 @@
+/* General Mobile Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #skills li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .project {
+        margin-bottom: 30px;
+    }
+
+    .project h3 {
+        font-size: 1.5rem;
+    }
+
+    body {
+        padding: 0 10px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    #skills li {
+        font-size: 1rem;
+    }
+
+    .project h3 {
+        font-size: 1.2rem;
+    }
+}
