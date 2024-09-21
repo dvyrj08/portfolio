@@ -11,9 +11,9 @@ body {
 /* Header Section with Light Peach Gradient */
 header {
     /* background: linear-gradient(90deg, #FFE0B2, #FFCCBC); Soft peach gradient */
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 24%);
-    color: #FFD54F; /* Lighter soft yellow for text */
+    background: rgb(80,200,120);
+    background: linear-gradient(135deg, rgba(80,200,120,1) 0%, rgba(44,59,40,1) 70%);
+        color: #FFD54F; /* Lighter soft yellow for text */
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
 }
@@ -96,7 +96,7 @@ header {
 
 #skills li:hover {
     background-color: #F0F0F0; /* Slightly darker white on hover */
-    color: #FFD54F; /* Lighter yellow on hover */
+    color: #1e4b1e; /* Lighter yellow on hover */
 }
 
 /* Projects Section */
