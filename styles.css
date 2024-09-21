@@ -5,17 +5,14 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #333; /* Default dark gray for body text */
+    color: #1e4b1e; /* Pine Green for all text except names and titles */
 }
 
 /* Header Section with Light Peach Gradient */
 header {
-  
-
+    /* background: linear-gradient(90deg, #FFE0B2, #FFCCBC); Soft peach gradient */
     background-color: #FBAB7E;
     background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 24%);
-    
-
     color: #FFD54F; /* Lighter soft yellow for text */
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
@@ -50,17 +47,16 @@ header {
     padding: 40px;
     background-color: #FFFFFF; /* Pure white background */
     text-align: center;
-    color: #333; /* Dark gray for readability */
 }
 
 #about h2 {
     font-size: 2rem;
-    color: #FFD54F; /* Lighter soft yellow for section headings */
+    color: #1e4b1e; /* Pine Green for section headings */
 }
 
 #about p {
     font-size: 1.1rem;
-    color: #555; /* Slightly darker gray for paragraph text */
+    color: #1e4b1e; /* Pine Green for paragraph text */
     max-width: 700px;
     margin: 0 auto;
 }
@@ -74,14 +70,17 @@ header {
 
 #skills h2 {
     font-size: 2rem;
-    color: #FFD54F; /* Lighter soft yellow for the section heading */
+    color: #1e4b1e; /* Pine Green for the section heading */
     margin-bottom: 20px;
 }
 
 #skills ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto; /* Center the list */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensure items are centered */
 }
 
 #skills li {
@@ -105,12 +104,11 @@ header {
     background-color: #FFFFFF; /* Pure white for projects */
     padding: 40px;
     text-align: center;
-    color: #333;
 }
 
 #projects h2 {
     font-size: 2rem;
-    color: #FFD54F; /* Lighter soft yellow for the section heading */
+    color: #1e4b1e; /* Pine Green for the section heading */
     margin-bottom: 20px;
 }
 
@@ -120,18 +118,18 @@ header {
 
 .project h3 {
     font-size: 1.8rem;
-    color: #333; /* Dark gray for project titles */
+    color: #1e4b1e; /* Pine Green for project titles */
 }
 
 .project p {
     font-size: 1rem;
-    color: #666; /* Gray for project descriptions */
+    color: #1e4b1e; /* Pine Green for project descriptions */
     max-width: 600px;
     margin: 0 auto 15px;
 }
 
 .project a {
-    color: #FFD54F; /* Lighter yellow for links */
+    color: #1e4b1e; /* Lighter yellow for links */
     text-decoration: none;
     font-weight: bold;
     padding: 8px 20px;
@@ -150,27 +148,28 @@ header {
     background-color: #F7F7F7; /* Off-white background */
     padding: 40px;
     text-align: center;
-    color: #333;
 }
 
 #contact h2 {
     font-size: 2rem;
-    color: #FFD54F; /* Lighter soft yellow for the section heading */
+    color: #1e4b1e; /* Pine Green for the section heading */
     margin-bottom: 20px;
 }
 
 #contact p {
     font-size: 1.1rem;
-    color: #666; /* Gray for contact details */
+    color: #1e4b1e; /* Pine Green for contact details */
+    margin-bottom: 20px; /* Adds space between text and button */
 }
 
 #contact a {
-    color: #FFD54F; /* Lighter yellow for links */
+    color: #1e4b1e; /* Lighter yellow for links */
     text-decoration: none;
     font-weight: bold;
     border: 2px solid #E0E0E0;
     padding: 8px 20px;
     border-radius: 4px;
+    display: inline-block; /* Ensures it's treated like a block and won't overlap */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -182,7 +181,7 @@ header {
 /* Footer */
 footer {
     background-color: #F5F5F5; /* Light shade of white */
-    color: #FFD54F; /* Lighter yellow for footer text */
+    color: #1e4b1e; /* Lighter yellow for footer text */
     text-align: center;
     padding: 20px;
     margin-top: 40px;
@@ -209,6 +208,10 @@ footer p {
         font-size: 1rem;
         text-align: center;
     }
+
+    #contact p {
+        margin-bottom: 30px; /* Extra space for smaller screens */
+    }
 }
 
 @media (max-width: 480px) {
@@ -217,10 +220,9 @@ footer p {
     }
 
     #skills li {
-        display: block; /* Makes skill boxes stack vertically on small screens */
-        width: 100%; /* Full width for each skill item */
-        margin: 10px auto; /* Centers and adds space between boxes */
+        font-size: 1rem;
     }
+
     .project h3 {
         font-size: 1.2rem;
     }
