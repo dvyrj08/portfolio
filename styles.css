@@ -217,9 +217,10 @@ footer p {
     }
 
     #skills li {
-        font-size: 1rem;
+        display: block; /* Makes skill boxes stack vertically on small screens */
+        width: 100%; /* Full width for each skill item */
+        margin: 10px auto; /* Centers and adds space between boxes */
     }
-
     .project h3 {
         font-size: 1.2rem;
     }
