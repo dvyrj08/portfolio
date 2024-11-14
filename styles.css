@@ -11,14 +11,19 @@ body {
 /* Header Section with Light Peach Gradient */
 header {
     /* background: linear-gradient(90deg, #FFE0B2, #FFCCBC); Soft peach gradient */
-    background: rgb(80,200,120);
-    background: linear-gradient(135deg, rgba(80,200,120,1) 0%, rgba(44,59,40,1) 70%);
+     background: rgb(80,200,120);
+    background: linear-gradient(135deg, rgba(80,200,120,1) 0%, rgba(44,59,40,1) 70%); 
+
+
         color: #FFD54F; /* Lighter soft yellow for text */
     padding: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
 }
 
 .header-container {
+
+
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -227,3 +232,5 @@ footer p {
         font-size: 1.2rem;
     }
 }
+
+
