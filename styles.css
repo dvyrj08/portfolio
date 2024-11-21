@@ -8,16 +8,38 @@ body {
     color: #1e4b1e; /* Pine Green for all text except names and titles */
 }
 
-/* Header Section with Light Peach Gradient */
 header {
-    /* background: linear-gradient(90deg, #FFE0B2, #FFCCBC); Soft peach gradient */
-     background: rgb(80,200,120);
-    background: linear-gradient(135deg, rgba(80,200,120,1) 0%, rgba(44,59,40,1) 70%); 
-
-
-        color: #FFD54F; /* Lighter soft yellow for text */
+    background: linear-gradient(135deg, rgba(80, 200, 120, 1) 0%, rgba(44, 59, 40, 1) 70%);
+    color: #FFD54F;
     padding: 20px 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;
+    min-height: 300px; /* Adjust as needed for enough space */
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column; /* Stack elements */
+    align-items: center; /* Center items */
+    justify-content: center;
+}
+
+
+.logo {
+    display: block; /* Ensure it behaves like a block element */
+    width: auto; /* Allow the natural width of the image */
+    height: auto; /* Allow the natural height of the image */
+    margin: 0 auto; /* Center it horizontally */
+    padding-bottom: 2%;
+}
+     
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .header-container {
@@ -33,9 +55,9 @@ header {
 }
 
 .name {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800; /* Extra bold */
-    margin: 0;
+    margin: 10px 0 5px;
     color: #ffffff; /* Lighter yellow for the name */
 }
 
@@ -68,41 +90,78 @@ header {
 
 /* Skills Section */
 #skills {
-    background-color: #F7F7F7; /* Slightly off-white for contrast */
+    background-color: #F7F7F7;
     padding: 40px;
     text-align: center;
 }
 
 #skills h2 {
     font-size: 2rem;
-    color: #1e4b1e; /* Pine Green for the section heading */
+    color: #1e4b1e;
     margin-bottom: 20px;
 }
 
-#skills ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0 auto; /* Center the list */
+.skills-container {
+    display: flex;               /* Flexbox for horizontal layout */
+    flex-wrap: wrap;             /* Allows wrapping on smaller screens */
+    justify-content: center;     /* Centers the items horizontally */
+    gap: 20px;                   /* Adds space between each skill */
+}
+
+.skill {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Ensure items are centered */
+    justify-content: center;     /* Horizontally center the logo */
+    align-items: center;         /* Vertically center the logo */
+    width: 70px;                /* Fixed width for uniform size */
+    height: 70px;               /* Fixed height for uniform size */
+    position: relative;
+    transition: transform 0.3s;  /* Smooth scaling transition */
 }
 
-#skills li {
-    display: inline-block;
-    margin: 15px; /* Adds space around each skill box */
-    font-size: 1.2rem;
-    color: #555; /* Dark gray for skills */
-    padding: 10px 15px;
-    border: 2px solid #E0E0E0; /* Light gray border */
-    border-radius: 8px;
-    transition: background-color 0.3s, color 0.3s;
+.skill:hover {
+    transform: scale(1.1);       /* Scale up on hover */
+    z-index: 1;                  /* Ensure the hovered logo stays on top */
 }
 
-#skills li:hover {
-    background-color: #F0F0F0; /* Slightly darker white on hover */
-    color: #1e4b1e; /* Lighter yellow on hover */
+.skill img {
+    width: 100%;                 /* Fill the container width */
+    height: 100%;                /* Fill the container height */
+    object-fit: contain;         /* Maintain aspect ratio */
+    transition: transform 0.3s;  /* Smooth zoom effect */
 }
+
+.skill img:hover {
+    transform: scale(1.1);       /* Zoom effect */
+}
+
+/* Hidden label using ::after */
+.skill::after {
+    content: attr(data-label);   /* Pull the label from the data attribute */
+    position: absolute;
+    bottom: -30px;               /* Move the label further below the logo */
+    font-size: 1rem;
+    color: #1e4b1e;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 0;                   /* Initially hidden */
+    transform: translateY(10px);  /* Slightly move down */
+    transition: opacity 0.3s, transform 0.3s; /* Smooth appearance */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show label on hover */
+.skill:hover::after {
+    opacity: 1;                  /* Fully visible */
+    transform: translateY(0);    /* Move to default position */
+}
+
+.skill:hover img {
+    transform: scale(1.1); /* Zoom effect for the image on hover */
+}
+
+
+
 
 /* Projects Section */
 #projects {
@@ -234,3 +293,12 @@ footer p {
 }
 
 
+.logo{
+    width: 200px; 
+    height: 100px; 
+}
+
+header > div {
+    display: flex;
+    justify-content: center;
+}
