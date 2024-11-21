@@ -30,12 +30,12 @@ header {
 
 .logo {
     display: block; /* Ensure it behaves like a block element */
-    width: auto; /* Allow the natural width of the image */
-    height: auto; /* Allow the natural height of the image */
+    height: 100px ; /* Allow the natural height of the image */
     margin: 0 auto; /* Center it horizontally */
     padding-bottom: 2%;
 }
      
+
 .header-content {
     display: flex;
     flex-direction: column;
@@ -293,12 +293,4 @@ footer p {
 }
 
 
-.logo{
-    width: 200px; 
-    height: 100px; 
-}
 
-header > div {
-    display: flex;
-    justify-content: center;
-}
