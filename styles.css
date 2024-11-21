@@ -293,4 +293,55 @@ footer p {
 }
 
 
+#socials {
+    background-color: #F7F7F7;
+    padding: 40px;
+    text-align: center;
+}
+
+#socials h2 {
+    font-size: 2rem;
+    color: #1e4b1e;
+    margin-bottom: 20px;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;    /* Align icons horizontally */
+    gap: 20px;                  /* Space between icons */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 50px;                /* Set width for uniform size */
+    height: 50px;               /* Set height for uniform size */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon img {
+    width: 100%;                /* Make the logo fill the container */
+    height: 100%;               /* Maintain aspect ratio */
+    object-fit: contain;        /* Prevent distortion */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+.social-icon:hover {
+    transform: scale(1.1);      /* Slight zoom effect on hover */
+    opacity: 0.8;               /* Slight opacity change on hover */
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 768px) {
+    .social-container {
+        flex-wrap: wrap;         /* Wrap icons on smaller screens */
+        justify-content: center;
+    }
+
+    .social-icon {
+        width: 40px;             /* Slightly smaller icons on mobile */
+        height: 40px;
+    }
+}
+
+
 
