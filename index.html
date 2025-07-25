@@ -6,63 +6,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Divyraj's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Linking external CSS file -->
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="icon" href="assets/images/dv-favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
-    <!-- Header section -->
-    <header>
-        <div class="header-container">
+    <main class="portfolio-grid-container">
+
+        <section id="hero-introduction" class="grid-area-hero">
+            <img src="assets/images/DV.png" alt="logo" class="logo">
             <h1 class="name">Divyraj Solanki</h1>
             <p class="titles">Web Developer | Software Engineer | Programmer</p>
+            <p>Let's build something great together!</p>
+        </section>
+
+        <section id="skills" class="grid-area-skills">
+            <h2>My Expertise</h2> <div class="skills-container">
+                <div class="skill" data-label="HTML">
+                    <img src="assets/images/html-logo.svg" alt="HTML Logo">
+                </div>
+                <div class="skill" data-label="CSS">
+                    <img src="assets/images/css-logo.svg" alt="CSS Logo">
+                </div>
+                <div class="skill" data-label="JavaScript">
+                    <img src="assets/images/javascript-logo.svg" alt="JavaScript Logo">
+                </div>
+                <div class="skill" data-label="React">
+                    <img src="assets/images/react-logo.svg" alt="React Logo">
+                </div>
+                <div class="skill" data-label="Node.js">
+                    <img src="assets/images/nodejs-logo.svg" alt="Node.js Logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="grid-area-about">
+            <h2>Let's Talk About Me</h2> <p>I'm a passionate web developer with experience in HTML, CSS, JavaScript, and more. I love building web apps that are fast, responsive, and user-friendly.</p>
+            </section>
+
+        <section id="projects" class="grid-area-projects">
+            <h2>My Creative Work</h2> <div class="projects-container"> <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>A clean and professional portfolio to showcase my work and skills.</p>
+                    <a href="https://divyrajsolanki.vercel.app/" target="_blank">View Live</a> <a href="https://github.com/your-repo-link" target="_blank">GitHub Repo</a> </div>
+                <div class="project">
+                    <h3>Todo App</h3>
+                    <p>A simple and intuitive task management web app built with React and Node.js.</p>
+                    <a href="#" target="_blank">View Live</a>
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </div>
+                </div>
+        </section>
+
+    </main> <section id="socials" class="full-width-section">
+        <h2>Follow Me</h2>
+        <div class="social-container">
+            <a href="https://instagram.com/dvyrj" target="_blank" class="social-icon">
+                <img src="assets/images/ig-logo.svg" alt="Instagram"> </a>
+            <a href="https://github.com/dvyrj08" target="_blank" class="social-icon">
+                <img src="assets/images/github-mark.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/divyrajsolanki9586" target="_blank" class="social-icon">
+                <img src="assets/images/icons8-linkedin.svg" alt="LinkedIn">
+            </a>
         </div>
-    </header>
-
-    <section>
-        
-    </section>
-    
-    <!-- About Me section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a passionate web developer with experience in HTML, CSS, JavaScript, and more. I love building web apps that are fast, responsive, and user-friendly.</p>
     </section>
 
-    <!-- Skills section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-        </ul>
-    </section>
+    <section id="contact" class="full-width-section">
+        <h2>Contact Me</h2> <p>Feel free to reach out to me at: <a href="mailto:divy9586@gmail.com">divy9586@gmail.com</a></p>
+        </section>
 
-    <!-- Projects section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Portfolio Website</h3>
-            <p>A clean and professional portfolio to showcase my work and skills.</p>
-            <a href="#" target="_blank">View Project</a>
-        </div>
-        <div class="project">
-            <h3>Todo App</h3>
-            <p>A simple and intuitive task management web app built with React and Node.js.</p>
-            <a href="#" target="_blank">View Project</a>
-        </div>
-    </section>
-
-    <!-- Contact section -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me at: <a href="mailto:divy9586@gmail.com">divy9586@gmail.com</a></p>
-    </section>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Divyraj Solanki. All Rights Reserved.</p>
     </footer>
