@@ -3,101 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Divyraj's Portfolio</title>
-<link rel="preconnect" href="https://rsms.me/">
-<link rel="stylesheet" href="https://rsms.me/inter/inter.css">    <link rel="icon" href="assets/images/dv-favicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <title>Divyraj Solanki - Portfolio</title>
+    <link rel="icon" href="assets/images/dv-favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-
-    <!-- Header section -->
-   
-
-    <main class="portfolio-grid-container">
-
-        <!-- Hero Section -->
-        <section id="hero-introduction" class="grid-area-hero">
-            <h1 class="name">Divyraj Solanki</h1>
-            <p class="titles">Web Developer | Software Engineer | Programmer</p>
-            <p>Let's build something great together!</p>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="grid-area-skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill" data-label="HTML">
-                    <img src="assets/images/html-logo.svg" alt="HTML Logo">
-                </div>
-                <div class="skill" data-label="CSS">
-                    <img src="assets/images/css-logo.svg" alt="CSS Logo">
-                </div>
-                <div class="skill" data-label="JavaScript">
-                    <img src="assets/images/javascript-logo.svg" alt="JavaScript Logo">
-                </div>
-                <div class="skill" data-label="React">
-                    <img src="assets/images/react-logo.svg" alt="React Logo">
-                </div>
-                <div class="skill" data-label="Node.js">
-                    <img src="assets/images/nodejs-logo.svg" alt="Node.js Logo">
+    <main class="main-content-wrapper">
+        <section id="hero-introduction" class="hero-section">
+            <div class="hero-text">
+                <p class="greeting">Hi, I'm</p>
+                <h1 class="name">Divyraj <br> Solanki</h1>
+            </div>
+            <div class="sphere-container">
+                <div class="sphere">
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="grid-area-about">
-            <h2>About Me</h2>
-            <p>I'm a passionate web developer with experience in HTML, CSS, JavaScript, and more. I love building web apps that are fast, responsive, and user-friendly.</p>
+        <section id="about" class="about-section">
+            <h2 class="section-title">About</h2>
+            <p>I'm a full-stack developer with a passion for creating innovative and efficient solutions.</p>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="grid-area-projects">
-            <h2>Projects</h2>
-            <div class="projects-container">
-                <div class="project">
-                    <h3>Portfolio Website</h3>
-                    <p>A clean and professional portfolio to showcase my work and skills.</p>
-                    <a href="https://divyrajsolanki.vercel.app/" target="_blank">View Live</a>
-                    <a href="https://github.com/your-repo-link" target="_blank">GitHub Repo</a>
+        <section id="projects" class="projects-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="assets/images/project-placeholder-1.png" alt="Project 1" class="project-image">
                 </div>
-                <div class="project">
-                    <h3>Todo App</h3>
-                    <p>A simple and intuitive task management web app built with React and Node.js.</p>
-                    <a href="#" target="_blank">View Live</a>
-                    <a href="#" target="_blank">GitHub Repo</a>
+                <div class="project-card">
+                    <img src="assets/images/project-placeholder-2.png" alt="Project 2" class="project-image">
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/project-placeholder-3.png" alt="Project 3" class="project-image">
+                </div>
+                <div class="project-card">
+                    <img src="assets/images/project-placeholder-4.png" alt="Project 4" class="project-image">
                 </div>
             </div>
         </section>
-
     </main>
 
-    <!-- Socials Section -->
-    <section id="socials" class="full-width-section">
-        <h2>Follow Me</h2>
+    <section id="socials" class="socials-section">
         <div class="social-container">
-            <a href="https://instagram.com/dvyrj" target="_blank" class="social-icon">
+            <a href="https://www.linkedin.com/in/divyrajsolanki9586" target="_blank" aria-label="LinkedIn" class="social-icon">
+                <img src="assets/images/icons8-linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://instagram.com/dvyrj" target="_blank" aria-label="Instagram" class="social-icon">
                 <img src="assets/images/ig-logo.svg" alt="Instagram">
             </a>
-            <a href="https://github.com/dvyrj08" target="_blank" class="social-icon">
+            <a href="https://github.com/dvyrj08" target="_blank" aria-label="GitHub" class="social-icon">
                 <img src="assets/images/github-mark.svg" alt="GitHub">
-            </a>
-            <a href="https://www.linkedin.com/in/divyrajsolanki9586" target="_blank" class="social-icon">
-                <img src="assets/images/icons8-linkedin.svg" alt="LinkedIn">
             </a>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="full-width-section">
-        <h2>Contact</h2>
-        <p>Feel free to reach out to me at: <a href="mailto:divy9586@gmail.com">divy9586@gmail.com</a></p>
-    </section>
-
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Divyraj Solanki. All Rights Reserved.</p>
+        <p>&copy; 2025 Divyraj Solanki. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
