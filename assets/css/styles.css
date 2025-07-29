@@ -22,9 +22,9 @@
     background-color: #39FF14;
     border-radius: 5px;
     background-image: -webkit-gradient(linear, 0 0, 0 100%,
-                       color-stop(.5, rgba(255, 255, 255, .2)),
-                       color-stop(.5, transparent), 
-                       to(transparent));
+                            color-stop(.5, rgba(255, 255, 255, .2)),
+                            color-stop(.5, transparent),
+                            to(transparent));
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -41,6 +41,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 40px 20px;
+    overflow-x: hidden; /* ADDED THIS LINE TO PREVENT HORIZONTAL SCROLLBAR */
 }
 
 /* --- 2. Main Content Wrapper --- */
@@ -116,7 +117,7 @@ body {
     backface-visibility: visible;
     border: 1px solid rgba(255, 143, 0, 0.3);
     box-shadow: 0 0 15px 0 rgba(255, 143, 0, 0.05),
-               inset 0 0 15px 0 rgba(255, 143, 0, 0.1);
+                inset 0 0 15px 0 rgba(255, 143, 0, 0.1);
 }
 
 /* Generate 32 sphere elements with rotations */
@@ -225,6 +226,10 @@ body {
     text-align: center;
     padding: 40px 20px;
     margin-top: 20px;
+    width: 100%; /* Ensure it takes full width to allow centering */
+    max-width: 800px; /* Constrain to main content width */
+    margin-left: auto; /* Center horizontally */
+    margin-right: auto; /* Center horizontally */
 }
 
 .social-container {
@@ -255,7 +260,7 @@ footer {
     max-width: 800px;
     text-align: center;
     padding: 20px;
-    padding-left: 120px; /* Add left padding to avoid social icons */
+    padding-left: 0; /* REMOVED THE PADDING THAT WAS CAUSING OVERFLOW AND PUSHING IT OFF-CENTER */
     color: #B0B0B0;
     font-size: 0.85em;
     margin-top: 30px;
@@ -301,7 +306,7 @@ footer {
     .sphere i {
         border: 1px solid rgba(255, 143, 0, 0.25);
         box-shadow: 0 0 10px 0 rgba(255, 143, 0, 0.03),
-                   inset 0 0 10px 0 rgba(255, 143, 0, 0.08);
+                    inset 0 0 10px 0 rgba(255, 143, 0, 0.08);
     }
 
     .section-title {
@@ -318,9 +323,10 @@ footer {
     }
 
     .socials-section {
-        bottom: 15px;
-        left: 15px;
-        padding: 8px;
+        padding: 30px 15px;
+        margin-top: 10px;
+        width: 100%;
+        max-width: none;
     }
 
     .social-container {
@@ -330,10 +336,6 @@ footer {
     .social-icon img {
         width: 35px;
         height: 35px;
-    }
-
-    .socials-section {
-        padding: 30px 15px;
     }
 }
 
@@ -361,6 +363,53 @@ footer {
     .sphere i {
         border: 1px solid rgba(255, 143, 0, 0.2);
         box-shadow: 0 0 8px 0 rgba(255, 143, 0, 0.02),
-                   inset 0 0 8px 0 rgba(255, 143, 0, 0.06);
+                    inset 0 0 8px 0 rgba(255, 143, 0, 0.06);
+    }
+}
+
+/* --- Custom Cursor Styles --- */
+html,
+body {
+    &,
+    * {
+        cursor: none; /* Hides the default cursor */
+    }
+}
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none; /* Ensures the cursor elements don't interfere with clicks */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0; /* Starts hidden */
+    transform: translate(-50%, -50%); /* Centers the cursor */
+    transition: opacity 0.3s ease-in-out,
+                transform 0.3s ease-in-out;
+    z-index: 9999; /* Ensure it's on top of everything */
+}
+
+.cursor-dot {
+    width: 8px; /* Size of the inner dot */
+    height: 8px;
+    background-color: #39FF14; /* Using your bright green color */
+}
+
+.cursor-dot-outline {
+    width: 40px; /* Size of the outer outline */
+    height: 40px;
+    background-color: rgba(57, 255, 20, 0.2); /* Using your bright green with transparency */
+}
+
+/* --- RESPONSIVENESS FOR CURSOR (OPTIONAL) --- */
+/* You might want to hide the custom cursor on touch devices or smaller screens */
+@media (max-width: 768px) {
+    .cursor-dot,
+    .cursor-dot-outline {
+        display: none; /* Hide custom cursor on smaller screens */
+    }
+    body {
+        cursor: default; /* Show default cursor on smaller screens */
     }
 }
