@@ -81,9 +81,80 @@ body {
 .hero-section .name {
     font-size: 5.5em;
     font-weight: 800;
-    color: #39FF14;
     line-height: 1.1;
     margin-bottom: 0;
+
+    /* Keep the gradient background always present, but initially positioned off-screen */
+    background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #39FF14, #FF6B6B);
+    background-size: 400%; /* Make the background larger than the container */
+    background-position: 0% 0; /* Initial position for the gradient (off-screen or at start) */
+
+    /* Apply background-clip to text and make color transparent always */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Text is always transparent to show background */
+
+    /* Set up transition for background-position for hover IN and OUT */
+    transition: background-position 0.8s ease-in-out;
+
+    /* This is the key: overlay the original green color when not hovered. */
+    /* We'll use a pseudo-element or text-shadow for this if direct color doesn't work well with transparent. */
+    /* Let's try to achieve it purely with background-position first. */
+    /* If the green doesn't show up, we might need a slightly different approach or a solid color gradient for initial state. */
+}
+
+.hero-section .name:hover {
+    background-position: 100% 0; /* Move the gradient to show colorful effect on hover */
+}
+
+/* Let's try to ensure the initial green color without blinking */
+/* We can achieve the initial green state by having the linear gradient start and end with green,
+   and then transition to the desired multi-color gradient. */
+/* OR, simpler, have the gradient always be the multi-color one,
+   but position it such that only the green part is visible initially. */
+/* Or, even better, have a gradient with just green initially and transition its colors. */
+
+
+/* REVISED APPROACH for the smoothest transition: */
+/* The key is to always have the background-clip: text and color: transparent,
+   and control the color by the gradient itself. */
+
+/* Let's redefine the base .hero-section .name */
+.hero-section .name {
+    font-size: 5.5em;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 0;
+
+    /* Define a gradient that starts and ends with your green, with the colorful part in between */
+    background: linear-gradient(90deg, #39FF14 0%, #39FF14 25%, #FF6B6B 50%, #4ECDC4 75%, #39FF14 100%);
+    background-size: 400% 100%; /* Wider background to allow movement */
+    background-position: 0% 0; /* Start at the initial green part of the gradient */
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent; /* Always transparent to show the clipped background */
+
+    /* Transition only the background-position for the hover effect */
+    transition: background-position 0.8s ease-in-out;
+}
+
+.hero-section .name:hover {
+    /* Move the gradient so the colorful parts come into view */
+    background-position: 100% 0;
+}
+
+
+/* --- Responsiveness for Hero Section (already in your CSS, just showing context) --- */
+@media (max-width: 768px) {
+    .hero-section .name {
+        font-size: 2.8em; /* Example: Adjust font size for smaller screens */
+    }
+}
+@media (max-width: 480px) {
+    .hero-section .name {
+        font-size: 2.2em; /* Example: Further adjust font size for very small screens */
+    }
 }
 
 /* --- 3D Sphere Styles --- */
