@@ -20,7 +20,7 @@
 
 ::-webkit-scrollbar-thumb {
     background-color: #39FF14;
-    border-radius: 5px;
+    border-radius: px;
     background-image: -webkit-gradient(linear, 0 0, 0 100%,
                             color-stop(.5, rgba(255, 255, 255, .2)),
                             color-stop(.5, transparent),
@@ -107,12 +107,7 @@ body {
     background-position: 100% 0; /* Move the gradient to show colorful effect on hover */
 }
 
-/* Let's try to ensure the initial green color without blinking */
-/* We can achieve the initial green state by having the linear gradient start and end with green,
-   and then transition to the desired multi-color gradient. */
-/* OR, simpler, have the gradient always be the multi-color one,
-   but position it such that only the green part is visible initially. */
-/* Or, even better, have a gradient with just green initially and transition its colors. */
+
 
 
 /* REVISED APPROACH for the smoothest transition: */
