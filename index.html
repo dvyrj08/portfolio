@@ -33,18 +33,36 @@
         <section id="projects" class="projects-section">
             <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <img src="assets/images/project-placeholder-1.png" alt="Project 1" class="project-image">
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/project-placeholder-2.png" alt="Project 2" class="project-image">
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/project-placeholder-3.png" alt="Project 3" class="project-image">
-                </div>
-                <div class="project-card">
-                    <img src="assets/images/project-placeholder-4.png" alt="Project 4" class="project-image">
-                </div>
+       <!-- Drunkard’s Dilemma (side-by-side with live preview thumbnail) -->
+<article class="dd-card" id="project-dd">
+  <div class="dd-media">
+  <a class="dd-thumb" href="https://drunkards-dilemma.vercel.app" target="_blank" rel="noopener" aria-label="Open Drunkard’s Dilemma live site">
+    <div class="dd-livefill">
+      <iframe src="https://drunkards-dilemma.vercel.app" title="Drunkard’s Dilemma preview" loading="lazy"></iframe>
+    </div>
+  </a>
+</div>
+
+  <div class="dd-body">
+    <h3 class="dd-title">Drunkard’s Dilemma</h3>
+    <p class="dd-desc">
+      Rule-based drink recommender. You pick weather, taste, mood, and occasion — it snaps to a deterministic match with copy that feels tailored, without any backend or API calls.
+    </p>
+    <p class="dd-tech">React 18 · TypeScript 5 · Vite 5 · Tailwind 3 · Vercel</p>
+
+    <ul class="dd-list">
+      <li>Deterministic key: <code>weather:taste:mood:occasion</code> → <em>O(1)</em> lookup</li>
+      <li>Taste-bucket fallback + dynamic copy composer</li>
+      <li>Static build on Edge; zero runtime dependencies</li>
+    </ul>
+
+    <div class="dd-actions">
+      <a class="dd-btn" href="https://drunkards-dilemma.vercel.app" target="_blank" rel="noopener">Live site</a>
+      <a class="dd-btn" href="https://github.com/dvyrj08/drunkards-dilemma" target="_blank" rel="noopener">Code repo</a>
+    </div>
+  </div>
+</article>
+
             </div>
         </section>
     </main>
