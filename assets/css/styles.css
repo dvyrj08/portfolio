@@ -489,7 +489,6 @@ footer {
     .sphere-container {
         width: 180px;
         height: 180px;
-        perspective: 166px;
     }
 
     .sphere,
@@ -574,7 +573,6 @@ footer {
     .sphere-container {
         width: 120px;
         height: 120px;
-        perspective: 111px;
     }
 
     .sphere,
