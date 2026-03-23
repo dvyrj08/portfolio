@@ -304,6 +304,16 @@ body {
 .dd-tech{margin:0 0 12px;color:#9aa0a6;font-size:.95rem;}
 .dd-list{margin:10px 0 0 18px;color:#cfd1d4;font-size:.96rem;}
 .dd-list li{margin:.38rem 0;}
+.dd-tech-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+.dd-tech-chips span{
+  font-size:.8rem;font-weight:500;
+  padding:3px 10px;border-radius:20px;
+  background:#1a1a1f;border:1px solid #2e2e35;
+  color:#9aa0a6;
+  transition:border-color .18s ease,color .18s ease;
+}
+.dd-card:hover .dd-tech-chips span{border-color:rgba(57,255,20,.3);color:#c8cdd2;}
+
 .dd-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;}
 .dd-btn{
   display:inline-flex;align-items:center;gap:8px;
@@ -327,7 +337,38 @@ body {
 }
 
 
-/* --- 7. Socials Section --- */
+/* --- 7. Contact Section --- */
+.contact-section {
+    background-color: #1A1A1A;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-section p {
+    color: #B0B0B0;
+    margin-bottom: 16px;
+    font-size: 1.05em;
+}
+
+.contact-email {
+    display: inline-block;
+    color: #39FF14;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.contact-email:hover {
+    border-bottom-color: #39FF14;
+}
+
+/* --- 8. Socials Section --- */
 .socials-section {
     text-align: center;
     padding: 40px 20px;
