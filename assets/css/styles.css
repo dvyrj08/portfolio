@@ -98,6 +98,24 @@ body {
     transition: background-position 0.8s ease-in-out;
 }
 
+.typewriter {
+    font-size: 1.2em;
+    color: #39FF14;
+    margin-top: 12px;
+    font-weight: 400;
+    min-height: 1.6em;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    animation: blink 0.7s step-end infinite;
+    color: #39FF14;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
 .hero-section .name:hover {
     /* Move the gradient so the colorful parts come into view */
     background-position: 100% 0;
