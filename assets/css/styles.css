@@ -368,6 +368,24 @@ body {
     border-bottom-color: #39FF14;
 }
 
+.resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid #39FF14;
+    border-radius: 8px;
+    color: #39FF14;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.resume-btn:hover {
+    background-color: #39FF14;
+    color: #141115;
+}
+
 /* --- 8. Socials Section --- */
 .socials-section {
     text-align: center;
