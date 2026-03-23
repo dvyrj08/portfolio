@@ -281,6 +281,28 @@ body {
              0 6px 16px rgba(0,0,0,.45);
 }
 
+/* iframe preview banner */
+.dd-preview{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/7;
+  border-radius:10px;
+  overflow:hidden;
+  margin-bottom:20px;
+  border:1px solid #1f1f23;
+  background:#000;
+}
+.dd-preview iframe{
+  position:absolute;
+  top:0; left:0;
+  width:calc(100% / 0.6);
+  height:calc(100% / 0.6);
+  transform:scale(0.6);
+  transform-origin:top left;
+  border:none;
+  pointer-events:none;
+}
+
 .dd-title{margin:0 0 8px;font-size:1.25rem;font-weight:800;color:#fff;}
 .dd-desc{margin:0 0 12px;color:#b3b3b8;line-height:1.5;}
 .dd-tech-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
